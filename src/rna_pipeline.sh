@@ -3,19 +3,7 @@
 # Copyright (C) 2016-2017 Bohdan Khomtchouk and Derek Van Booven
 # This file is part of NGStoolkit.
 
-
-# This file is a single-click automated RNA-seq pipeline starting with bz2 files through differential expression.
-# USAGE : $ sh rna_pipeline.sh <pipeline_type> <genome> <paired/single> <config> <strandedness>
-
-# There are 6 input parameters:
-# 1.	Pipeline type { simple, complete }.  Simple is for individual flow cells where all people want are the stats for a given run, and complete is through from bz2 to differential expression.
-# 2.	Genome type { hg19, hg38, mm10, rn6 }.  Specify the genome for the samples.
-# 3.	Read type { paired, single }.  Paired/single ended read flag.
-# 4.	Configuration file { <filename> }.  This file is a list of sampleIDs and the groups for differential expression.  First column is the sample ID and the second column is the group.
-# 5.	Stranded information { u, s, r }.  Type of strandedness to take the counts from STAR output.  U = unstranded, s = stranded, r = reverse stranded as defined by STAR.
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+#--------------------------------------------------------------------------------------
 #Step 0 - Initialization
 mkdir logs
 mkdir logs/unzip
